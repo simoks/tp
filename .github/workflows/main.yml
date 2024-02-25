@@ -2,12 +2,12 @@ name: learn-github-actions-for-devops-module
 run-name: ${{ github.actor }} is learning GitHub Actions for DevOps Module
 on: [push]
 jobs:
-  check-bats-version:
+  check-typescript-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: '17'
+          node-version: '14'
       - run: npm install -g typescript
       - run: tsc -v
